@@ -31,6 +31,25 @@ let g:NERDTreeHighlightCursorline = 1
 ```
 That will run `setlocal cursorline` in the NERDTree window
 
+
+## Excluding Buffers
+
+You can exclude buffers from being highlighted in NERDTree.
+
+Exclude "FooBar" buffers and any buffer ending in ".log" - separate multiple patterns with `\|`
+```
+let g:nerdtree_sync_excluded_patterns = 'FooBar\|.log$'
+```
+Or to exclude only "FooBar":
+```
+let g:nerdtree_sync_excluded_patterns = 'FooBar'
+```
+Or to exclude multiple specific file paths:
+
+```
+let g:nerdtree_sync_excluded_patterns = '/path/to/exclude/file1.txt\|/another/file.log'
+```
+
 ## Credits
 
 * [Lambart](https://superuser.com/users/158390/lambart) from superuser for his [answer](https://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path/474298#474298)
